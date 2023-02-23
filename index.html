@@ -5,18 +5,62 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Chatter|App</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <style>
+        *{ 
+            font-family: "Roboto", Arial, sans-serif    /*Assign default fonts*/
+        }
+        h1{ color: #00838f }                          /*Add some colour for Header*/
+        h2{ color: #00838f; font-size:smaller }       /*Add some colour for each conversation*/
+        p{ background-color: #eeeeee }                /*Insert bubble-like chat background*/
+        button{ 
+            background-color: #00838f;                
+            color: white;
+            border: none;
+            border-radius: 4px;
+            text-transform: uppercase; 
+            font-size: larger }
+
+    </style>
 </head>
 
 <body>
     <h1> Chatter|App </h1>
-    <h2> Favorites </h2>
-    <h2> Regular </h2>
-    <p> <strong>Elon Musk</strong> 10/02/2023</p>
-    <p> <strong>Steve Jobs</strong> 12/02/2023</p>
-    <p> <strong>Leo Dicaprio</strong> 18/02/2023</p>
-    <p> <strong>Larry Fink</strong> 22/02/2023</p>
+    <!-- All conversations, grouped into Favorites and Regular -->
+    <h2> Favorites </h2>   <!-- Category 1: Favorites --> 
+    <strong> Space Stuff</strong> <small>10/02/2023</small> <br>   <!--Conversation 1-->
+
+    <h2> Regular </h2>     <!-- Category 2: Regular -->
+    <strong> Group Project </strong> <small>12/02/2023</small> <br>
+    <strong> Friday Night </strong> <small>18/02/2023</small> <br>
+    <strong> Personal Chat </strong> <small>22/02/2023</small> <br>
+
+    <!-- Chat area, specific chat open -->
+    <h1> Space Stuff </h1>
+    <button> FAVORITE</button> <br>
+
+    <h2> <smaller>Elon Musk</smaller> </h2>
+    <p> How's that rocket launcher going? Have you finished it already? </p> <!-- Message content-->
+    <small>11:50</small> <br>
+
+    <h2> <small>Yuri Gagarin</small> </h2>
+    <p> Almost. Finishing the attitude control system. </p>
+    <small>11:53</small> <br>
+
+    <h2> <small>You</small> </h2>
+    <p> Probably done by tomorrow! </p>
+    <small>11:54</small> <br>
+
+
+
+
+
+    <input> <button> SEND </button>
     
 
 </body>
 
 </html>
+
+<!-- Syntax validated with: https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2FFortranibal.github.io%2FMYOA-Course%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en-->
+<!-- No errors have been found! -->
