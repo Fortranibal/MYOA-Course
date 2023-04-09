@@ -1,66 +1,60 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Chatter|App</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" type="image/x-icon" href="./favicon.ico"/>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
 
-    <style>
-        *{ 
-            font-family: "Roboto", Arial, sans-serif    /*Assign default fonts*/
-        }
-        h1{ color: #00838f }                          /*Add some colour for Header*/
-        h2{ color: #00838f; font-size:smaller }       /*Add some colour for each conversation*/
-        p{ background-color: #eeeeee }                /*Insert bubble-like chat background*/
-        button{ 
-            background-color: #00838f;                
-            color: white;
-            /* border: none;
-            border-radius: 4px; */
-            text-transform: uppercase; 
-            font-size: larger }
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
-    </style>
 </head>
 
-<body>
-    <h1> Chatter|App </h1>
-    <!-- All conversations, grouped into Favorites and Regular -->
-    <h2> Favorites </h2>   <!-- Category 1: Favorites --> 
-    <strong> Space Stuff</strong> <small>10/02/2023</small> <br>   <!--Conversation 1-->
+<body onload="init()">
+    <section id="channel-area">
+        <div class="headbar">
+            <img src="https://ip.lfe.mw.tum.de/sections/moocus.png" alt="logo" id="logo">
+            <h1 id="app-title">chatter | app</h1>
+        </div>
 
-    <h2> Regular </h2>     <!-- Category 2: Regular -->
-    <strong> Group Project </strong> <small>12/02/2023</small> <br>
-    <strong> Friday Night </strong> <small>18/02/2023</small> <br>
-    <strong> Personal Chat </strong> <small>22/02/2023</small> <br>
+        <a id="fab" class="button">+</a>
+        <div id="channel-list-area">
+            <h2>Favorites</h2>
+            <ul class="channel-list" id="favorite-channels"></ul>
+            <h2>Regular</h2>
+            <ul class="channel-list" id="regular-channels"></ul>
+        </div>
+    </section>
 
-    <!-- Chat area, specific chat open -->
-    <h1> Space Stuff </h1>
-    <button type="button"> FAVORITE</button> <br>
-
-    <h2> <smaller>Elon Musk</smaller> </h2>
-    <p> How's that rocket launcher going? Have you finished it already? </p> <!-- Message content-->
-    <small>11:50</small> <br>
-
-    <h2> <small>Yuri Gagarin</small> </h2>
-    <p> Almost. Finishing the attitude control system. </p>
-    <small>11:53</small> <br>
-
-    <h2> <small>You</small> </h2>
-    <p> Probably done by tomorrow! </p>
-    <small>11:54</small> <br>
-
-
-
-
-
-    <input> <button> SEND </button>
-    
-
+    <section id="message-area">
+        <div class="headbar" id="message-area-header">
+            <h1></h1>
+            <a id="favorite-button" class="material-icons button"></a>
+        </div>
+        <div id="chat-area">
+            <p id="select-channel">Select a channel to start messaging.</p>
+        </div>
+        <div id="input-area">
+            <a class="material-icons button" id="emoticon-button">insert_emoticon</a>
+            <input type="text" id="message-input" name="message-input" minlength="1" maxlength="500" placeholder="... write your message">
+            <a class="material-icons button" id="send-button">send</a>
+        </div>
+        <div id="emoji-area">
+            <div id="emoji-header">
+                <span>Emojis</span>
+                <a class="material-icons button" id="close-emoticon-button">cancel</a>
+            </div>
+            <div id="emoji-list"></div>
+        </div>
+    </section>
 </body>
+<script src="js/messages.js"></script>
+<script src="js/channels.js"></script>
+<script src="js/main.js"></script>
+<script src="js/emojis.js"></script>
 
 </html>
-
-<!-- Syntax validated with: https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2FFortranibal.github.io%2FMYOA-Course%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en-->
-<!-- No errors have been found! -->
